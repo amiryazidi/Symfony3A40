@@ -1,0 +1,21 @@
+
+
+
+{% set x =5%}
+
+{{x}}
+<br>
+{# comment #}
+
+{% for u in users %}
+    
+    {{u.id}}
+    {{u.name | upper}}
+    {{u.age}}
+    <img src="{{u.image}}"  alt="test" style="width:50px; heigth :50px">
+    <a href="{{path('d',{'id':u.id})}}"> detail </a>
+    {%if u.age>30 %}
+    <input type="submit" value="register">
+   
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,23 @@
+
+
+<form method='post' action='/dql4' >
+  <lable> search <label>
+    <input  type="text" name='nom'>
+    <input type="submit" value="search">
+</form>
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+
+    <tr     {% for s in students %}>
+       <td> {{s.id}} </td>
+       <td> {{s.name}}  </td>
+        <td> {{s.age}}  </td>
+    </tr {% endfor %}>
+
+
+
+</table>
